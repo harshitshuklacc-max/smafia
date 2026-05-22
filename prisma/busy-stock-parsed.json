@@ -1,0 +1,62 @@
+[
+  {
+    "bcn": "7a",
+    "artNo": "702252 ASICS 9",
+    "size": "NA",
+    "color": "Standard",
+    "price": 3299,
+    "quantity": 1,
+    "opQty": 1,
+    "qtyIn": 0,
+    "qtyOut": 0,
+    "inStock": true
+  },
+  {
+    "bcn": "703127",
+    "artNo": "NIKE SB",
+    "size": "37",
+    "color": "BLUE",
+    "price": 3339,
+    "quantity": 1,
+    "opQty": 1,
+    "qtyIn": 0,
+    "qtyOut": 0,
+    "inStock": true
+  },
+  {
+    "bcn": "703128",
+    "artNo": "NIKE SB",
+    "size": "38",
+    "color": "BLUE",
+    "price": 3339,
+    "quantity": 1,
+    "opQty": 1,
+    "qtyIn": 0,
+    "qtyOut": 0,
+    "inStock": true
+  },
+  {
+    "bcn": "703130",
+    "artNo": "NIKE SB",
+    "size": "36",
+    "color": "PINK",
+    "price": 3339,
+    "quantity": 1,
+    "opQty": 1,
+    "qtyIn": 0,
+    "qtyOut": 0,
+    "inStock": true
+  },
+  {
+    "bcn": "703131",
+    "artNo": "NIKE SB",
+    "size": "38",
+    "color": "PINK",
+    "price": 3339,
+    "quantity": 1,
+    "opQty": 1,
+    "qtyIn": 0,
+    "qtyOut": 0,
+    "inStock": true
+  }
+]

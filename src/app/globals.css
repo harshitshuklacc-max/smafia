@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sm-black: #0a0a0a;
+  --color-sm-charcoal: #141414;
+  --color-sm-slate: #1e1e1e;
+  --color-sm-muted: #888888;
+  --color-sm-white: #f5f5f5;
+  --color-sm-neon: #39ff14;
+  --color-sm-accent: #00f0ff;
+  --color-sm-gold: #d4af37;
+  --font-display: "Segoe UI", system-ui, sans-serif;
+  --font-body: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-sm-black);
+  color: var(--color-sm-white);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-sm-neon) 40%, transparent);
+  color: white;
+}
+
+.glass {
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-text {
+  text-shadow: 0 0 20px color-mix(in srgb, var(--color-sm-neon) 60%, transparent);
+}
+
+.neon-border {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-sm-neon) 30%, transparent),
+    0 0 24px color-mix(in srgb, var(--color-sm-neon) 15%, transparent);
+}
+
+.gradient-hero {
+  background: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      color-mix(in srgb, var(--color-sm-accent) 12%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 80% 20%,
+      color-mix(in srgb, var(--color-sm-neon) 8%, transparent),
+      transparent 60%
+    ),
+    var(--color-sm-black);
+}
+
+.card-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px color-mix(in srgb, var(--color-sm-neon) 10%, transparent);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 font-semibold tracking-wide transition-all duration-300;
+  background: linear-gradient(135deg, var(--color-sm-neon), #2dd40f);
+  color: #0a0a0a;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--color-sm-neon) 40%, transparent);
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-3 font-medium tracking-wide transition-all duration-300;
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-sm-neon);
+  color: var(--color-sm-neon);
+}
+
+input,
+select,
+textarea {
+  @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: color-mix(in srgb, var(--color-sm-neon) 50%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-sm-neon) 15%, transparent);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
